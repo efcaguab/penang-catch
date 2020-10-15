@@ -1,0 +1,19 @@
+# Infrastructure parameters
+project_id: peskas
+service_account:
+  sa_name: penang-catch
+  sa_description: Penang catch data pipeline domain
+  sa_display_name: Penang catch domain
+
+validation:
+  source: storage
+  bucket: penang
+  auth_file: "auth/gcs_auth_file.json"
+
+
+
+source_agent: manual
+data_format: csv
+name: penang_catch
+ingestion:
+  type: all-data
