@@ -12,24 +12,25 @@ This repository contains code for the Penang catch data pipeline.
 
 ## Pipeline description
 
-**Inputs**: 
+*Pipeline input(s)*: A manually updated excel sheet containing catch information at Penangs landing sites.
 
-1. A manually updated excel sheet containing catch information at Penangs landing sites
-
-**Outputs**:
-
-1. A BigQuery dataset with clean catch data 
-1. A private API that provides data summaries and analytics on the catch data
+*Pipeline product(s)*: A BigQuery dataset with clean catch data. The dataset includes tables with *(i)* the full clean dataset, *(ii)* aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
 
 **Stages**:
 
 1. Input data (excel format) is stored in Google Storage. Updates are manual.
-1. Changes in the storage file are automatically detected and trigger a pub/sub message
-1. The pub/sub message trigger a call to a CloudRun function that validates, cleans, and transforms, the data. The clean data is deposited in a private BigQuery table.
-1. An analytics 
+1. Changes in the storage file are automatically detected and trigger a Google pub/sub notification.
+1. The pub/sub message triggers a call to an API processing function that reads the data from the storage. The function then validates, cleans, and transforms, the data. Finally, the clean data is deposited in a Google BigQuery table. The processing function runs serverless in Google CloudRun. 
 
 ## Deployment steps
 
-- Create a service account for this domain
+- [Create a service account for this domain](deployment/create-service-account.sh)
+- Create a key for the service account
+- Upload the 
 - Create a storage bucket
 - Upload data to bucket
+
+## Requirements
+
+- Docker >= 18.0
+- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
