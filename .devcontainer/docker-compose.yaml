@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  r-penang-catch:
+    build: .
+    ports:
+      - "8792:8787"
+    volumes:
+      - ..:/home/rstudio/penang-catch
+    environment: 
+      DISABLE_AUTH: "true"
