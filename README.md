@@ -38,7 +38,10 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
     key](https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#secretmanager-create-secret-cli)
     to Google Secret Manager to simplify reuse:
     [`deployment/create-secret.sh`](deployment/create-secret.sh)
-  - Create a storage bucket
+  - [Create the
+    storage](https://cloud.google.com/storage/docs/creating-buckets)
+    bucket:
+    [`deployment/create-storage-bucket.sh`](deployment/create-storage-bucket.sh)
   - Upload data to bucket
 
 ## Requirements

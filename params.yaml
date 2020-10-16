@@ -8,6 +8,12 @@ service_account:
 secret:
   file: auth/key.json
   name: penang-catch
+storage:
+  bucket:
+    name: penang-catch
+    location: ASIA
+    uniform_access: on
+    class: Standard
 validation:
   source: storage
   bucket: penang
