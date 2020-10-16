@@ -7,4 +7,4 @@ source yaml.sh
 create_variables ../params.yaml
 
 gcloud iam service-accounts keys create ~/key.json \
-  --iam-account ${service_account_sa_name}@${project_id}.iam.gserviceaccount.com
+  --iam-account ${service_account_name}@${project_id}.iam.gserviceaccount.com

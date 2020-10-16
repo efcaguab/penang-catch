@@ -1,9 +1,9 @@
 # Infrastructure parameters
 project_id: peskas
 service_account:
-  sa_name: penang-catch
-  sa_description: Penang catch data pipeline domain
-  sa_display_name: Penang catch domain
+  name: penang-catch
+  description: Penang catch data pipeline domain
+  display_name: Penang catch domain
 
 validation:
   source: storage

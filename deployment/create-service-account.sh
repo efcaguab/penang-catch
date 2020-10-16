@@ -6,6 +6,6 @@ source yaml.sh
 
 create_variables ../params.yaml
 
-gcloud iam service-accounts create $service_account_sa_name \
-    --description="${service_account_sa_description}" \
-    --display-name="${service_account_sa_display_name}"
+gcloud iam service-accounts create $service_account_name \
+    --description="${service_account_description}" \
+    --display-name="${service_account_display_name}"
