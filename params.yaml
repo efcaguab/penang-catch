@@ -1,5 +1,6 @@
 # Infrastructure parameters
-project_id: peskas
+project:
+  id: peskas
 service_account:
   name: penang-catch
   description: Penang catch data pipeline domain
