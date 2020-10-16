@@ -26,14 +26,20 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
 
 ## Deployment steps
 
-  - [Create a service account for this
-    domain](deployment/create-service-account.sh)
-  - Create a key for the service account
-  - Upload the
+  - [Create a service
+    account](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
+    for this domain:
+    [`deployment/create-service-account.sh`](deployment/create-service-account.sh)
+  - [Create a
+    key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
+    for the service account:
+    [`deployment/create-service-account-key.sh`](deployment/create-service-account-key.sh)
+  - Upload the key to Google Secret Manager
   - Create a storage bucket
   - Upload data to bucket
 
 ## Requirements
 
   - Docker \>= 18.0
-  - [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
+  - [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) \>=
+    311.0.0
