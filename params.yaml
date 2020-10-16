@@ -4,7 +4,9 @@ service_account:
   name: penang-catch
   description: Penang catch data pipeline domain
   display_name: Penang catch domain
-
+secret:
+  file: ~/key.json
+  name: penang-catch
 validation:
   source: storage
   bucket: penang
