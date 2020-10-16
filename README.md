@@ -34,7 +34,10 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
     key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
     for the service account:
     [`deployment/create-service-account-key.sh`](deployment/create-service-account-key.sh)
-  - Upload the key to Google Secret Manager
+  - [Upload the
+    key](https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#secretmanager-create-secret-cli)
+    to Google Secret Manager to simplify reuse:
+    [`deployment/create-secret.sh`](deployment/create-secret.sh)
   - Create a storage bucket
   - Upload data to bucket
 
