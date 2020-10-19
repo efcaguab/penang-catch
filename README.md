@@ -30,19 +30,25 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
     account](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
     for this domain:
     [`deployment/create-service-account.sh`](deployment/create-service-account.sh)
+
   - [Create a
     key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
     for the service account:
     [`deployment/create-service-account-key.sh`](deployment/create-service-account-key.sh)
+
   - [Upload the
     key](https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#secretmanager-create-secret-cli)
     to Google Secret Manager to simplify reuse:
     [`deployment/create-secret.sh`](deployment/create-secret.sh)
+
   - [Create the
     storage](https://cloud.google.com/storage/docs/creating-buckets)
     bucket:
     [`deployment/create-storage-bucket.sh`](deployment/create-storage-bucket.sh)
-  - Upload data to bucket
+
+  - [Create topic](https://cloud.google.com/pubsub/docs/admin) for
+    message passing between the storage bucket and the validation API:
+    [`deployment/create-pubsub-topic.sh`](deployment/create-pubsub-topic.sh)
 
 ## Requirements
 

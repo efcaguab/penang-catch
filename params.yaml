@@ -17,7 +17,11 @@ storage:
 validation:
   source: storage
   bucket: penang
-  auth_file: "auth/gcs_auth_file.json"
+  pubsub:
+    topic:
+      name: penang-catch-validation
+      format: json
+      event: OBJECT_FINALIZE
 
 
 
