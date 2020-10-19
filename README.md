@@ -50,6 +50,11 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
     message passing between the storage bucket and the validation API:
     [`deployment/create-pubsub-topic.sh`](deployment/create-pubsub-topic.sh)
 
+  - [Enable
+    notifications](https://cloud.google.com/storage/docs/gsutil/commands/notification)
+    for raw data updates to the validation topic:
+    [`deployment/create-raw-data-notification.sh`](deployment/create-raw-data-notification.sh)
+
 ## Requirements
 
   - Docker \>= 18.0

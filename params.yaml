@@ -15,18 +15,17 @@ storage:
     uniform_access: on
     class: Standard
 validation:
-  source: storage
-  bucket: penang
+  api:
+    image_name: penang-catch
   pubsub:
     topic:
       name: penang-catch-validation
+    notification:
       format: json
       event: OBJECT_FINALIZE
 
+data:
+  raw:
+    object:
+      name: penang-fisheries-landings.xlsx
 
-
-source_agent: manual
-data_format: csv
-name: penang_catch
-ingestion:
-  type: all-data
