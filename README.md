@@ -44,7 +44,7 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
     [`deployment/create-storage-bucket.sh`](deployment/create-storage-bucket.sh)
   - [Create topic](https://cloud.google.com/pubsub/docs/admin) for
     message passing between the storage bucket and the validation API:
-    [`deployment/create-pubsub-topic.sh`](deployment/create-pubsub-topic.sh)
+    [`deployment/create-pubsub-validation-topic.sh`](deployment/create-pubsub-validation-topic.sh)
   - [Enable
     notifications](https://cloud.google.com/storage/docs/gsutil/commands/notification)
     for raw data updates to the validation topic:
@@ -53,7 +53,10 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
     build](https://cloud.google.com/cloud-build/docs/build-debug-locally).
     This will create the url for the service:
     [`deployment/deploy-validation-api.sh`](deployment/deploy-validation-api.sh)
-  - Create subsription for message passing
+  - [Create pubsub
+    subsription](https://cloud.google.com/pubsub/docs/admin#pubsub_create_pull_subscription-gcloud)
+    to data validation topic:
+    [`deployment/create-pubsub-validation-subscription.sh`](deployment/create-pubsub-validation-subscription.sh)
   - Manually upload data to bucket
 
 ## Requirements

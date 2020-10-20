@@ -28,8 +28,15 @@ validation:
     notification:
       format: json
       event: OBJECT_FINALIZE
-
-data:
+    subscription:
+      name: penang-catch-validation
+      acknowledgement:
+        deadline: 600
+      retry:
+        delay:
+          min: 60s
+          max: 600s
+  endpoint: penang-catch-validation
   raw:
     object:
       name: penang-fisheries-landings.xlsx
