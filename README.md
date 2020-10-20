@@ -53,8 +53,15 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
     build](https://cloud.google.com/cloud-build/docs/build-debug-locally).
     This will create the url for the service:
     [`deployment/deploy-validation-api.sh`](deployment/deploy-validation-api.sh)
+  - If its the first time running pubsub push service,
+    [setup](https://cloud.google.com/pubsub/docs/push) pubsub
+    permissions and create and invoker account for push notifications,
+    skip otherwise:
+    [`deployment/setup-pubsub-permissions.sh`](deployment/setup-pubsub-permissions.sh)
+  - Grant permissions to invoke validation api:
+    [`deployment/grant-validation-api-permisions.sh`](deployment/grant-validation-api-permisions.sh)
   - [Create pubsub
-    subsription](https://cloud.google.com/pubsub/docs/admin#pubsub_create_pull_subscription-gcloud)
+    subscription](https://cloud.google.com/pubsub/docs/admin#pubsub_create_pull_subscription-gcloud)
     to data validation topic:
     [`deployment/create-pubsub-validation-subscription.sh`](deployment/create-pubsub-validation-subscription.sh)
   - Manually upload data to bucket
