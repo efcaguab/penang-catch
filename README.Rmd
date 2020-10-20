@@ -30,8 +30,11 @@ This repository contains code for the Penang catch data pipeline.
 - [Create the storage](https://cloud.google.com/storage/docs/creating-buckets) bucket: [`deployment/create-storage-bucket.sh`](deployment/create-storage-bucket.sh)
 - [Create topic](https://cloud.google.com/pubsub/docs/admin) for message passing between the storage bucket and the validation API: [`deployment/create-pubsub-topic.sh`](deployment/create-pubsub-topic.sh)
 - [Enable notifications](https://cloud.google.com/storage/docs/gsutil/commands/notification) for raw data updates to the validation topic: [`deployment/create-raw-data-notification.sh`](deployment/create-raw-data-notification.sh)
+- Deploy data validation API using a [local build](https://cloud.google.com/cloud-build/docs/build-debug-locally). This will create the url for the service: [`deployment/deploy-validation-api.sh`](deployment/deploy-validation-api.sh)
+- Create subsription for message passing
+- Manually upload data to bucket
 
 ## Requirements
 
 - Docker >= 18.0
-- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) >= 311.0.0
+- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) >= 311.0.0 including the [Local Builder](https://cloud.google.com/cloud-build/docs/build-debug-locally)

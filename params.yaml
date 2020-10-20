@@ -15,8 +15,13 @@ storage:
     uniform_access: on
     class: Standard
 validation:
+  config: cloudbuild.yaml
   api:
-    image_name: penang-catch
+    image:
+      name: penang-catch-validation
+    service:
+      name: penang-catch-validation
+      region: asia-east1
   pubsub:
     topic:
       name: penang-catch-validation
