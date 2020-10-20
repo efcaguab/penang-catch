@@ -12,7 +12,7 @@ library(plumber)
 #* @apiTitle Penang data validation
 
 #* Transform data
-#* @post /transform-data-pubsub
+#* @post /penang-catch-validation
 #* @param message a pub/sub message
 function(message=NULL){
 
