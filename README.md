@@ -42,6 +42,10 @@ aggregated summaries, summaries per *(iii)* fisher, and *(iv)* species.
     storage](https://cloud.google.com/storage/docs/creating-buckets)
     bucket:
     [`deployment/create-storage-bucket.sh`](deployment/create-storage-bucket.sh)
+  - [Grant service account
+    permissions](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
+    to admin storage objects:
+    [`deployment/grant-service-account-storage-permissions.sh`](deployment/grant-service-account-storage-permissions.sh)
   - [Create topic](https://cloud.google.com/pubsub/docs/admin) for
     message passing between the storage bucket and the validation API:
     [`deployment/create-pubsub-validation-topic.sh`](deployment/create-pubsub-validation-topic.sh)

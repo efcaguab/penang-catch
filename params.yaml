@@ -5,6 +5,13 @@ service_account:
   name: penang-catch
   description: Penang catch data pipeline domain
   display_name: Penang catch domain
+  role:
+    storage:
+      name: roles/storage.objectAdmin
+      condition:
+        expression: resource.name=="projects/_/buckets/bucket-name"
+        title: resource_name_is_penang_catch_bucket
+        description: Only grant access to penang-catch bucket
 secret:
   file: auth/key.json
   name: penang-catch
