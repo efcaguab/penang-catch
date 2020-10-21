@@ -9,7 +9,7 @@ service_account:
     storage:
       name: roles/storage.objectAdmin
       condition:
-        expression: resource.name=="projects/_/buckets/bucket-name"
+        expression: resource.name=="projects/_/buckets/penang-catch"
         title: resource_name_is_penang_catch_bucket
         description: Only grant access to penang-catch bucket
 secret:
