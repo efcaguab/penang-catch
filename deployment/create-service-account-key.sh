@@ -9,5 +9,5 @@ create_variables ../params.yaml
 DIR=$(dirname $secret_file)
 mkdir ../$DIR
 
-gcloud iam service-accounts keys create "$../{secret_file}" \
+gcloud iam service-accounts keys create "../${secret_file}" \
   --iam-account ${service_account_name}@${project_id}.iam.gserviceaccount.com
