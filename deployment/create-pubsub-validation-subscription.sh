@@ -6,7 +6,7 @@ source yaml.sh
 
 create_variables ../params.yaml
 
-validation_api_service_url=$(gcloud run services list --platform=managed | grep "${validation_api_service_name}" | cut -d " " -f 7)
+validation_api_service_url=$(gcloud run services list --platform=managed | grep "${validation_api_service_name}" | awk '{ print $4 }')
 
 gcloud pubsub subscriptions create ${validation_pubsub_subscription_name} \
    --topic ${validation_pubsub_topic_name} \
